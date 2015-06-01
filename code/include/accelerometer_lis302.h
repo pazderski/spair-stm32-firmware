@@ -2,6 +2,7 @@
 
 #include "stm32f4xx.h"
 #include "hdr_bitband.h"
+#include <math.h>
 
 class AccelerometerLIS302
 {
@@ -46,6 +47,7 @@ public:
 	volatile int8_t rawDataZ;
 
 	float accVal[3];
+	float angle[2];
 
 	volatile bool isDataReady;
 
@@ -102,6 +104,11 @@ public:
 		accVal[0] = (float)rawDataX;
 		accVal[1] = (float)rawDataY;
 		accVal[2] = (float)rawDataZ;
+	}
+
+	void CalculateAngles()
+	{
+		angle[0] = angle[1] = 0;
 	}
 };
 

@@ -138,6 +138,17 @@ void UartCommunicationInterface::PeriodicUpdate()
   // sprawdzenie, czy ramka zostala obsluzona oraz czy nie zachodzi wysy³anie ramki - jesli nie to brak analizy nastepnej
   if (isFrameReceived || isFrameSending) return;
 
+  // sprawdzenie, czy odbior ramki nie trwa zbyt dlugo
+  if (rxState != FR_IDLE)
+  {
+	  clock++;
+	  if (clock > RX_TIMEOUT)
+	  {
+		  // jesli czas jest przekroczony, to ramka jest ignorowana
+		  rxState = FR_IDLE;
+	  }
+  }
+
   // czytanie licznika kanalu DMA
   auto rxDmaCounter = DMA_USART_RX->NDTR;
 
@@ -146,17 +157,6 @@ void UartCommunicationInterface::PeriodicUpdate()
 
 	  rxDmaCounterPrev = rxDmaCounter;
 	  rxBufIndexWrite = RX_BUF_SIZE - rxDmaCounter;
-
-	  // sprawdzenie, czy odbior ramki nie trwa zbyt dlugo
-	  if (rxState != FR_IDLE)
-	  {
-		  clock++;
-		  if (clock > RX_TIMEOUT)
-		  {
-			  // jesli czas jest przekroczony, to ramka jest ignorowana
-			  rxState = FR_IDLE;
-		  }
-	  }
 
 	  // przegladanie bufora odebranych znaków
 	  while ((rxBufIndexWrite != rxBufIndexRead) && (!isFrameReceived))
