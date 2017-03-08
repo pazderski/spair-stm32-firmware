@@ -1,6 +1,6 @@
 #include "uart_communication_interface.h"
 
-//  Obliczanie 16-bitowego CRC (analogicznie jak w standardzie Modbus RTU)
+// Computation of  16-bit CRC (similar to Modbus RTU)
 uint16_t UartCommunicationInterface::CRC16(const uint8_t *nData, uint16_t wLength)
 {
   static const uint16_t wCRCTable[] =
@@ -54,42 +54,42 @@ uint16_t UartCommunicationInterface::CRC16(const uint8_t *nData, uint16_t wLengt
 void UartCommunicationInterface::HardwareInit()
 {
 
-	// zalaczenie portu PA
+	// Switch on PA
 	RCC->AHB1ENR |= RCC_AHB1ENR_GPIOAEN;
-	// zalaczenie zegara bloku USART2
+	// Switch on clock for USART2
 	RCC->APB1ENR |= RCC_APB1ENR_USART2EN;
-	// zalaczenie zegara kontrolera DMA1
+	// Switch on clock for DMA1
 	RCC->AHB1ENR |= RCC_AHB1ENR_DMA1EN;
 
 	// PA2 - UART2_TX (out), PA3 - UART_RX (in)
-	// remapowanie linii wg dokumentacji STM32F407
+	// lines remapping (based on STM32F407 datasheet)
 	GPIOA->AFR[0] |= (uint32_t) 7 << 8 | (uint32_t) 7 << 12;
 	GPIOA->MODER |=  GPIO_MODER_MODER2_1 | GPIO_MODER_MODER3_1;
 	GPIOA->OSPEEDR |= GPIO_OSPEEDER_OSPEEDR2_1 | GPIO_OSPEEDER_OSPEEDR3_1;
 	GPIOA->ODR |= GPIO_ODR_ODR_2; // podwieszenie linii
 
-	// Parametry transmisji
-	USART2->BRR = 0x16D; //115,2kbs //0x0341;//
+	// Transmission parameters
+	USART2->BRR = (uint16_t) (84000000/115200/2); //0x16D; //115,2kbs //0x0341;//
 	USART2->CR1 = USART_CR1_RE | USART_CR1_TE;
 	USART2->CR3 = USART_CR3_DMAT | USART_CR3_DMAR;
 	USART2->CR1 |= USART_CR1_UE;
 
 	// DMA1: USART2 RX : stream 5,  USART2 TX : stream 6
 
-	// RX - urzadzenie->pamiec, automatyczna inkrementacja wskaznika pamieci, znaki 8-bitowe, bufor cyckliczny
+	// RX - device->memory, auto-increment of the pointer memory, 8-bit chars, cyclic buffer
 	DMA_USART_RX->CR = DMA_SxCR_CHSEL_2 | DMA_SxCR_MINC | DMA_SxCR_CIRC;
 	DMA_USART_RX->NDTR = RX_BUF_SIZE;
-	DMA_USART_RX->PAR = (int) &(USART2->DR);
-	DMA_USART_RX->M0AR = (int) rxBuf;
+	DMA_USART_RX->PAR = (uint32_t) &(USART2->DR);
+	DMA_USART_RX->M0AR = (uint32_t) rxBuf;
 
-	//TX - pamiec->urzadzenie, automatyczna inkrementacja wskaznika pamieci
+	// TX - memory->device, auto-increment of the pointer memory
 	DMA_USART_TX->CR = DMA_SxCR_CHSEL_2 | DMA_SxCR_MINC | DMA_SxCR_DIR_1;
-	DMA_USART_TX->PAR = (int) &(USART2->DR);
+	DMA_USART_TX->PAR = (uint32_t) &(USART2->DR);
 
-	// zerowanie bitow statusowych (w tym flag b³êdów) kontrolera DMA1
+	// Clear status bits (w tym flag b³êdów) kontrolera DMA1
 	DMA1->HIFCR = DMA_HIFCR_CTCIF5 | DMA_HIFCR_CHTIF5 | DMA_HIFCR_CTEIF5 | DMA_HIFCR_CDMEIF5 | DMA_HIFCR_CFEIF5;
 
-	// zezwolenie na obsluge przerwan od kanalu DMA
+	// Start DMA transmission
 	DMA_USART_RX->CR |= DMA_SxCR_EN;
 }
 
@@ -102,8 +102,12 @@ void UartCommunicationInterface::Init()
 	isFrameReceived = false;
 
 	rxDmaCounterPrev = DMA_USART_RX->NDTR;
+
 	txData = txBuf + 4;
-	txBuf[0] = txBuf[1] = 0xAA; txBuf[2] = 0x00;	// inicjalizacja poczatku ramki nadawanej
+	rxData = rxFrame + 1;
+
+	// Initialization of the frame header
+	txBuf[0] = txBuf[1] = 0xAA; txBuf[2] = 0x00;
 }
 
 void UartCommunicationInterface::Send(uint16_t size)
@@ -111,102 +115,117 @@ void UartCommunicationInterface::Send(uint16_t size)
 
 	txBuf[3] = size;
 	auto crc = CRC16(txBuf+3, size+1);
-	txBuf[size+4] = crc >> 8;
-	txBuf[size+5] = crc & 0xFF;
+	auto crcFrame = (uint16_t*) &txBuf[size+4];
+	*crcFrame = crc;
 
-	// reset kanalu DMA
+	// reset DMA stream
 	DMA_USART_TX->CR = 0;
 	DMA_USART_TX->CR = DMA_SxCR_CHSEL_2 | DMA_SxCR_MINC | DMA_SxCR_DIR_0;
 	DMA_USART_TX->NDTR = size + 6;
 	DMA_USART_TX->M0AR = (int) txBuf;
 
-	// czyszczenie bitow statusowych (wraz z flagami bledow) dla DMA1
+	// clear status bits (along with error flags) for DMA1
 	DMA1->HIFCR = DMA_HIFCR_CTCIF6 | DMA_HIFCR_CHTIF6 | DMA_HIFCR_CTEIF6 | DMA_HIFCR_CDMEIF6 | DMA_HIFCR_CFEIF6;
 	USART2->SR &= ~(USART_SR_TC);
 
 	isFrameSending = true;
 
-	// zezwolenie na przerwanie od kanalu DMA
+	// Allow for interrupt from DMA stream
 	DMA_USART_TX->CR |= DMA_SxCR_TCIE;
-	// zalaczenie kanalu DMA i start transmisji
+	// Start DMA transmission
 	DMA_USART_TX->CR |= DMA_SxCR_EN;
+}
+
+bool UartCommunicationInterface::CheckFrame(void)
+{
+	auto crc1 = CRC16(rxFrame, rxFrameSize-1);
+	auto crc2 = 0;
+
+	// TO DO!!
+	crc2 = crc1;
+	if (crc1 == crc2)
+	{
+		return true;
+	}
+	else return false;
 }
 
 void UartCommunicationInterface::PeriodicUpdate()
 {
 
-  // sprawdzenie, czy ramka zostala obsluzona oraz czy nie zachodzi wysy³anie ramki - jesli nie to brak analizy nastepnej
+  // Check if a frame is being evaluated or transmitted
   if (isFrameReceived || isFrameSending) return;
 
-  // sprawdzenie, czy odbior ramki nie trwa zbyt dlugo
+  // Check the timemout condition
   if (rxState != FR_IDLE)
   {
 	  clock++;
 	  if (clock > RX_TIMEOUT)
 	  {
-		  // jesli czas jest przekroczony, to ramka jest ignorowana
+		  // Ignore a frame (it is not collected in the assumed time period)
 		  rxState = FR_IDLE;
 	  }
   }
 
-  // czytanie licznika kanalu DMA
+  // Read DMA counter
   auto rxDmaCounter = DMA_USART_RX->NDTR;
 
-  // sprawdzenie, czy w buforze sa nowe dane
-  if (rxDmaCounter != rxDmaCounterPrev) {
+  // Check if there are new characters
+  if (rxDmaCounter != rxDmaCounterPrev)
+  {
 
 	  rxDmaCounterPrev = rxDmaCounter;
 	  rxBufIndexWrite = RX_BUF_SIZE - rxDmaCounter;
 
-	  // przegladanie bufora odebranych znaków
-	  while ((rxBufIndexWrite != rxBufIndexRead) && (!isFrameReceived))
+	  // Look for stored characters in the cyclic buffer
+	  while (rxBufIndexWrite != rxBufIndexRead)
 	  {
-		  // pobranie znaku z buforu DMA
+		  // Read character from the buffer
 		  auto c = rxBuf[rxBufIndexRead];
 
+		  // Decode a frame (use FSM)
 		  switch (rxState)
 		  {
-		  	  case FR_IDLE:
-		  		  if (c == 0xAA)
-		  		  {
-		  			  rxState = FR_START_1;
-		  			  clock = 0;
-		  		  }
+	  	  	  case FR_IDLE:
+	  	  		  if (c == 0xAA)
+		  	  	  {
+	  	  			  rxState = FR_START_1;
+		  	  		  clock = 0;
+		  	  	  }
 		  	  break;
 
 		  	  case FR_START_1:
-		  		  if (c == 0xAA)
-		  		  {
-		  			  rxState = FR_START_2;
-		  		  }
-		  		  else rxState = FR_IDLE;
+		  	  	  if (c == 0xAA)
+		  	  		  rxState = FR_START_2;
+		  	  	  else
+		  	  		  rxState = FR_IDLE;
 		  	  break;
 
 		  	  case FR_START_2:
-		  		  if (c == 0x00)
-		  		  {
-		  			  rxState = FR_SIZE;
-		  		  }
-		  		  else rxState = FR_IDLE;
+		  	      if (c == 0x00)
+		  	  		  rxState = FR_SIZE;
+		  	  	  else
+		  	  		  rxState = FR_IDLE;
 		  	  break;
 
 		  	  case FR_SIZE:
 		  		  rxFrameIndex = 0;
-		  		  rxFrameSize = c+2;
-		  		  rxFrame[rxFrameIndex] = c;
-		  		  rxState = FR_DATA;
+		  	  	  rxFrameSize = c+2;
+		  	  	  rxFrame[rxFrameIndex] = c;
+		  	  	  rxState = FR_DATA;
 		  	  break;
 
 		  	  case FR_DATA:
-		  		  rxFrameIndex++;
-		  		  rxFrame[rxFrameIndex] = c;
-		  		  if (rxFrameIndex == rxFrameSize)
-		  		  {
-		  			  rxState = FR_IDLE;
-		  			  isFrameReceived = 1;
-		  		  }
+		  	  	  rxFrameIndex++;
+		  	  	  rxFrame[rxFrameIndex] = c;
+		  	  	  if (rxFrameIndex == rxFrameSize)
+		  	  	  {
+		  	  		  rxState = FR_IDLE;
+		  	  		  isFrameReceived = true;
+		  	  	  }
 		  	  break;
 		  }
+	  // Update a buffer index (and limit its value)
       rxBufIndexRead = (++rxBufIndexRead) & (RX_BUF_SIZE-1);
 	  }
   }

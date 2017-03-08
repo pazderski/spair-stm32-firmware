@@ -10,8 +10,8 @@
  *   - obs³uga akcelerometru przez interfejs SPI
  *   - obs³uga przetwornika A/C (z DMA)
  *
- *   Opracowanie: D. Pazderski, Katedra Sterowania i In¿ynierii Systemów 2015
- *   v. 1.5.0
+ *   Opracowanie: D. Pazderski, Katedra Sterowania i In¿ynierii Systemów 2015-2017
+ *   v. 1.6.0
  *
  ************************************************************************************************************/
 
@@ -24,7 +24,6 @@ int main(void)
 	App app;
 	pApp = &app;
 	app.Init();
-	Led::Init();
 
 	__enable_irq();
 

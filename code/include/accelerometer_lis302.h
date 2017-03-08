@@ -7,7 +7,7 @@
 class AccelerometerLIS302
 {
 
-	// Definicje rejestrów uk³adu LIS302DL
+	// Registers of LIS302DL
 	static uint16_t const WHO_AM_I = 0x8F00;
 	static uint16_t const CTRL_REG1	= 0x2000;
 	static uint16_t const CTRL_REG2	= 0x2100;
@@ -19,7 +19,7 @@ class AccelerometerLIS302
 
 	static uint8_t const ZYXDA_BIT = 0x08;
 
-	// Definicje stanow automatu do obslugi akcelerometru
+	// States of FSM
 	enum FsmState
 	{
 		STATE_IDLE,
@@ -51,7 +51,7 @@ public:
 
 	volatile bool isDataReady;
 
-	// Wymiana danych na SPI z blokowaniem
+	// Blocking data exchange on SPI
 	uint16_t WriteReadBlock(uint16_t data)
 	{
 		SPI_CS() = 0;
@@ -71,7 +71,7 @@ public:
 	{
 		fsmState = STATE_STATUS;
 		SPI_CS() = 0; __NOP(); __NOP();
-		// rozkaz wysylany
+		// Character to send
 		SPI1->DR = STATUS_REG;
 	}
 
@@ -82,10 +82,10 @@ public:
 		isDataReady = false;
 		fsmState = STATE_IDLE;
 		u16Data = SPI1->DR;
-		// ustawienie akcelerometru
+		// Set accelerometer
 		u16Data = WriteReadBlock(WHO_AM_I) & 0xFF;
 		u16Data = WriteReadBlock(CTRL_REG1 + 0x47) & 0xFF;
-		// zezwolenie na obsluge przerwan od odbiornika SPI
+		// Allow for SPI interrupts
 		SPI1->CR2 |= SPI_CR2_RXNEIE;
 	}
 
@@ -101,6 +101,7 @@ public:
 
 	void ScaleData()
 	{
+		// TO DO: compute acc in m/s^2
 		accVal[0] = (float)rawDataX;
 		accVal[1] = (float)rawDataY;
 		accVal[2] = (float)rawDataZ;

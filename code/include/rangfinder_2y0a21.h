@@ -2,7 +2,7 @@
 
 #include "stm32f4xx.h"
 
-// ADC1 -> DMA2, strumien 4
+// ADC1 -> DMA2, stream 4
 #define DMA2_ADC   DMA2_Stream4
 
 class Rangfinder2Y0A21
@@ -26,7 +26,8 @@ public:
 
 	bool isDataReady;
 
-	void Init() {
+	void Init()
+	{
 		HardwareInit();
 		isDataReady = 0;
 		pulses = 0;
@@ -37,19 +38,19 @@ public:
 		uint16_t counter = 0;
 		uint16_t dmaCounter, dmaIndexWrite;
 
-		// odczyt licznika kanalu DMA
+		// Read DMA counter
 		dmaCounter = DMA2_ADC->NDTR;
 
-		// sprawdzenie, czy w buforze sa nowe dane
+		// Check if there are new samples
 		if (dmaCounter != dmaPrevCounter)
 		{
 			dmaPrevCounter = dmaCounter;
-			// obliczenie indeksu w buforze zapisu w DMA
+			// Compute index in DMA buffer
 			dmaIndexWrite = DMA_SIZE - dmaCounter;
 
 			while (dmaIndexWrite != dmaIndexRead)
 			{
-				// kopiowanie z buforu DMA do buforu programowego
+				// Copy data from DMA buffer to another buffer
 				sampleBuf[sampleIndex++] = dmaBuf[dmaIndexRead++];
 				sampleIndex &= BUF_SIZE-1;
 				dmaIndexRead &= DMA_SIZE-1;
@@ -78,9 +79,10 @@ public:
 		pulses++;
 		if (pulses == 1)
 		{
-			// rozpoczêcie cyklu rejestracji
+			// Start the recording stage
 		}
-		if (pulses == 2) {
+		if (pulses == 2)
+		{
 			ReadBlock();
 			isDataReady = true;
 			pulses = 0;
@@ -90,7 +92,7 @@ public:
 	void Irq()
 	{
 		pulses = 0;
-		// wyzerowanie flagi zdarzenia
+		// Clear interrupt flag
 		EXTI->PR = EXTI_PR_PR0;
 	}
 };

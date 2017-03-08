@@ -1,14 +1,15 @@
 #pragma once
 
 #include "stm32f4xx.h"
+#include <string.h>
 
-// powiazania kanalow DMA z nadajnikiem i odbiornikiem UART
+// DMA streams associated with the selected UART driver
 #define DMA_USART_RX	DMA1_Stream5
 #define DMA_USART_TX	DMA1_Stream6
 
-class UartCommunicationInterface {
-
-	// definicje stanow automatu do odbioru ramek komunikacyjnych
+class UartCommunicationInterface
+{
+	// finite states machine - declaration of states names
 	enum FsmState
 	{
 		FR_IDLE,
@@ -18,7 +19,8 @@ class UartCommunicationInterface {
 		FR_DATA
 	};
 
-	static uint16_t const RX_TIMEOUT = 50;	// definicja maksymalnego czasu przesylania danych w ramce
+	// max time slot for a communication frame
+	static uint16_t const RX_TIMEOUT = 50;
 
 	volatile uint8_t  rxFrameIndex;
 	volatile FsmState  rxState;
@@ -38,7 +40,6 @@ class UartCommunicationInterface {
 
 	uint8_t rxBuf[RX_BUF_SIZE];
 	uint8_t txBuf[TX_BUF_SIZE];
-
 	uint8_t rxFrame[RX_BUF_SIZE];
 
 	uint16_t CRC16(const uint8_t *nData, uint16_t wLength);
@@ -48,6 +49,8 @@ class UartCommunicationInterface {
 public:
 
 	uint8_t * txData;
+	uint8_t * rxData;
+
 	volatile bool isFrameSending;
 	volatile bool isFrameReceived;
 
@@ -56,19 +59,17 @@ public:
 	void Init(void);
 	void PeriodicUpdate();
 	void Send(uint16_t size);
+	bool CheckFrame(void);
 
-	bool CheckFrame(void)
+	void SendUserData(void * data, uint16_t size)
 	{
-		auto crc1 = CRC16(rxFrame, rxFrameSize-1);
-		auto crc2 = __REV16(0);
+		memcpy(txData, data, size);
+		Send(size);
+	}
 
-		// tymczasowo
-		crc2 = crc1;
-		if (crc1 == crc2)
-		{
-			return true;
-		}
-		else return false;
+	void GetUserData(void * data, uint16_t size)
+	{
+		memcpy(data, rxData, size);
 	}
 
 	void IrqDma()

@@ -1,7 +1,7 @@
 #pragma once
 #include <math.h>
 
-// filtr o transmitancji: G(z^-1)=(b0+b1 z^-1+b2 z^-2)/(1+a1 z^-1+a2 z^-2)
+// Digital second order filter with the following transfers function: G(z^-1)=(b0+b1 z^-1+b2 z^-2)/(1+a1 z^-1+a2 z^-2)
 class Filter2Iir
 {
 
@@ -32,7 +32,8 @@ public:
 
 		float out = 0;
 		u[0] = input;
-		// wyznaczenie odpowiedzi filtru
+
+		// Compute filter time response
 		for(size_t i = 0; i < 3; i++)
 		{
 			out += b[i] * u[i];
@@ -43,7 +44,8 @@ public:
 		}
 
 		y[0] = out;
-		// przepisanie probek w buforach filtru
+
+		// Copy samples in the buffer
 		for(size_t i = 2; i > 0; i--)
 		{
 			u[i] = u[i-1];

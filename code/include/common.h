@@ -3,12 +3,14 @@
 #include <string.h>
 
 #include "stm32f4xx.h"
-#include "rangfinder_2y0a21.h"
 #include "uart_communication_interface.h"
+#include "cmd_msgs.h"
+
+#include "rangfinder_2y0a21.h"
 #include "accelerometer_lis302.h"
 #include "led_interface.h"
-#include "filter2_iir.h"
 
+#include "filter2_iir.h"
 #include "data_recorder.h"
 
 
@@ -62,11 +64,12 @@ public:
 	void Init()
 	{
 		GeneralHardwareInit();
+
+		Led::Init();
 		acc.Init();
 	    rang.Init();
 		com.Init();
-
-		rang.Start();
+		//rang.Start();
 
 	}
 
@@ -94,9 +97,17 @@ public:
 			{
 				if(com.CheckFrame())
 				{
-					// przygotowanie danych do wyslania
-					memcpy(com.txData, &filter1.output, sizeof(float));
-					com.Send(sizeof(float));
+					static CmdMaster cmdM;
+					static CmdSlave cmdS;
+
+					// analyze data from master
+					com.GetUserData(&cmdM, sizeof(CmdMaster));
+
+					// prepare data to send
+					cmdS.data1 = cmdM.data1*5;
+					cmdS.data2 = acc.accVal[0];
+
+					com.SendUserData(&cmdS, sizeof(CmdSlave));
 				}
 				com.isFrameReceived = false;
 			}
@@ -105,14 +116,15 @@ public:
 			{
 				float out;
 				acc.ScaleData();
+				//out = filter1.CalculateOutput(acc.accVal[0]);
 				out = filter1.CalculateOutput(acc.accVal[0]);
-				rec1.RecordCyclically(out);
+				//rec1.RecordCyclically(out);
 				acc.isDataReady = false;
 			}
 
 			if(rang.isDataReady)
 			{
-				// obrobka sygnalu
+				// Signal processing
 
 			}
 		}

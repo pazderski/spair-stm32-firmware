@@ -27,8 +27,8 @@
         <Option name="nostartfiles" value="0"/>
         <Option name="LTO" value="0"/>
         <Option name="IsNewStartupCode" value="1"/>
-        <Option name="Library" value="Not use C Library"/>
-        <Option name="UserEditLinker" value="-lstdc++; "/>
+        <Option name="Library" value="Use base C Library"/>
+        <Option name="UserEditLinker" value="--entry=main; -lstdc++; "/>
         <LinkedLibraries>
           <Libset dir="d:\tools\arm\gnu tools arm embedded\arm-none-eabi\lib\armv7e-m\fpu\" libs="m"/>
         </LinkedLibraries>
@@ -70,7 +70,7 @@
       <Option name="org.coocox.codebugger.gdbjtag.core.verify" value="1"/>
       <Option name="org.coocox.codebugger.gdbjtag.core.downloadFuction" value="Erase Effected"/>
       <Option name="org.coocox.codebugger.gdbjtag.core.defaultAlgorithm" value="STM32F4xx_1024.elf"/>
-      <Option name="org.coocox.codebugger.gdbjtag.coredebugInRamInitCommands" value="cd E:/praca/dydaktyka/spair/2015/lab/stm32/code/spair/Debug/bin restore spair.elf set {unsigned int*}0xE000ED08 = 0x20000000 set $sp = {unsigned int*}0x20000000 set $pc = {unsigned int*}0x20000004 "/>
+      <Option name="org.coocox.codebugger.gdbjtag.coredebugInRamInitCommands" value="cd E:/praca/dydaktyka/spair/2015/lab/stm32/code/code/spair/Debug/bin restore spair.elf set {unsigned int*}0xE000ED08 = 0x20000000 set $sp = {unsigned int*}0x20000000 set $pc = {unsigned int*}0x20000004 "/>
     </DebugOption>
     <ExcludeFile/>
   </Target>
@@ -88,8 +88,8 @@
     <File name="src" path="" type="2"/>
     <File name="inc/data_recorder.h" path="include/data_recorder.h" type="1"/>
     <File name="cmsis_boot/stm32f4xx.h" path="cmsis_boot/stm32f4xx.h" type="1"/>
-    <File name="cmsis_boot/startup" path="" type="2"/>
     <File name="inc" path="" type="2"/>
+    <File name="cmsis_boot/startup" path="" type="2"/>
     <File name="cmsis/core_cm4_simd.h" path="cmsis/core_cm4_simd.h" type="1"/>
     <File name="cmsis/core_cmFunc.h" path="cmsis/core_cmFunc.h" type="1"/>
     <File name="cmsis/core_cm4.h" path="cmsis/core_cm4.h" type="1"/>
@@ -97,17 +97,18 @@
     <File name="inc/filter2_iir.h" path="include/filter2_iir.h" type="1"/>
     <File name="inc/led_interface.h" path="include/led_interface.h" type="1"/>
     <File name="cmsis" path="" type="2"/>
+    <File name="inc/cmd_msgs.h" path="include/cmd_msgs.h" type="1"/>
     <File name="syscalls/syscalls.c" path="syscalls/syscalls.c" type="1"/>
     <File name="inc/common.h" path="include/common.h" type="1"/>
     <File name="syscalls" path="" type="2"/>
     <File name="src/accelerometer_lis302.cpp" path="src/accelerometer_lis302.cpp" type="1"/>
-    <File name="inc/rangfinder_2y0a21.h" path="include/rangfinder_2y0a21.h" type="1"/>
     <File name="cmsis_boot/stm32f4xx_conf.h" path="cmsis_boot/stm32f4xx_conf.h" type="1"/>
+    <File name="inc/rangfinder_2y0a21.h" path="include/rangfinder_2y0a21.h" type="1"/>
     <File name="cmsis_boot/system_stm32f4xx.h" path="cmsis_boot/system_stm32f4xx.h" type="1"/>
     <File name="cmsis/cmsis_nvic.h" path="cmsis/cmsis_nvic.h" type="1"/>
     <File name="src/rangfinder_2y0a21.cpp" path="src/rangfinder_2y0a21.cpp" type="1"/>
-    <File name="src/uart_communication_interface.cpp" path="src/uart_communication_interface.cpp" type="1"/>
     <File name="inc/uart_communication_interface.h" path="include/uart_communication_interface.h" type="1"/>
+    <File name="src/uart_communication_interface.cpp" path="src/uart_communication_interface.cpp" type="1"/>
     <File name="inc/accelerometer_lis302.h" path="include/accelerometer_lis302.h" type="1"/>
   </Files>
 </Project>

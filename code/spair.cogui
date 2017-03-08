@@ -15,15 +15,6 @@
 <part id="2"/>
 <part id="3"/>
 <part id="4"/>
-<part id="5"/>
-<part id="6"/>
-<part id="7"/>
-<part id="8"/>
-<part id="9"/>
-<part id="10"/>
-<part id="11"/>
-<part id="12"/>
-<part id="13"/>
 </presentation>
 </folder>
 </info>
@@ -32,98 +23,31 @@
 <input factoryID="org.coocox.builder.ui.persistent.PersistentElementFactory">&#x0A;<org.coocox.welcome.ui.WelcomePage/>
 </input>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="system.h" partName="system.h" path="E:/praca/dydaktyka/spair/2015/lab/stm32/code/include/system.h" title="system.h" tooltip="E:/praca/dydaktyka/spair/2015/lab/stm32/code/include/system.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/spair/inc/system.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1793" selectionTopPixel="0"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="rangfinder_2y0a21.h" partName="rangfinder_2y0a21.h" path="E:/praca/dydaktyka/spair/2015/lab/stm32/code/code/include/rangfinder_2y0a21.h" title="rangfinder_2y0a21.h" tooltip="E:/praca/dydaktyka/spair/2015/lab/stm32/code/code/include/rangfinder_2y0a21.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/spair/inc/rangfinder_2y0a21.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="708" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="system_stm32f4xx.h" partName="system_stm32f4xx.h" path="E:/praca/dydaktyka/spair/2015/lab/stm32/code/cmsis_boot/system_stm32f4xx.h" title="system_stm32f4xx.h" tooltip="E:/praca/dydaktyka/spair/2015/lab/stm32/code/cmsis_boot/system_stm32f4xx.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/spair/cmsis_boot/system_stm32f4xx.h"/>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.cpp" partName="main.cpp" path="E:/praca/dydaktyka/spair/2015/lab/stm32/code/code/src/main.cpp" title="main.cpp" tooltip="E:/praca/dydaktyka/spair/2015/lab/stm32/code/code/src/main.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/spair/src/main.cpp"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_conf.h" partName="stm32f4xx_conf.h" path="E:/praca/dydaktyka/spair/2015/lab/stm32/code/cmsis_boot/stm32f4xx_conf.h" title="stm32f4xx_conf.h" tooltip="E:/praca/dydaktyka/spair/2015/lab/stm32/code/cmsis_boot/stm32f4xx_conf.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/spair/cmsis_boot/stm32f4xx_conf.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="740"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="core_cm4.h" partName="core_cm4.h" path="E:/praca/dydaktyka/spair/2015/lab/stm32/code/cmsis/core_cm4.h" title="core_cm4.h" tooltip="E:/praca/dydaktyka/spair/2015/lab/stm32/code/cmsis/core_cm4.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/spair/cmsis/core_cm4.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="3" selectionOffset="18553" selectionTopPixel="5685"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="uart_communication_interface.h" partName="uart_communication_interface.h" path="E:/praca/dydaktyka/spair/2015/lab/stm32/code/include/uart_communication_interface.h" title="uart_communication_interface.h" tooltip="E:/praca/dydaktyka/spair/2015/lab/stm32/code/include/uart_communication_interface.h" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="uart_communication_interface.h" partName="uart_communication_interface.h" path="E:/praca/dydaktyka/spair/2015/lab/stm32/code/code/include/uart_communication_interface.h" title="uart_communication_interface.h" tooltip="E:/praca/dydaktyka/spair/2015/lab/stm32/code/code/include/uart_communication_interface.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/spair/inc/uart_communication_interface.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1214" selectionTopPixel="815"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="common.cpp" partName="common.cpp" path="E:/praca/dydaktyka/spair/2015/lab/stm32/code/src/common.cpp" title="common.cpp" tooltip="E:/praca/dydaktyka/spair/2015/lab/stm32/code/src/common.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/spair/src/common.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="301" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="accelerometer_lis302.cpp" partName="accelerometer_lis302.cpp" path="E:/praca/dydaktyka/spair/2015/lab/stm32/code/src/accelerometer_lis302.cpp" title="accelerometer_lis302.cpp" tooltip="E:/praca/dydaktyka/spair/2015/lab/stm32/code/src/accelerometer_lis302.cpp" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="accelerometer_lis302.cpp" partName="accelerometer_lis302.cpp" path="E:/praca/dydaktyka/spair/2015/lab/stm32/code/code/src/accelerometer_lis302.cpp" title="accelerometer_lis302.cpp" tooltip="E:/praca/dydaktyka/spair/2015/lab/stm32/code/code/src/accelerometer_lis302.cpp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/spair/src/accelerometer_lis302.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="1" selectionOffset="803" selectionTopPixel="425"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="data_recorder.h" partName="data_recorder.h" path="E:/praca/dydaktyka/spair/2015/lab/stm32/code/include/data_recorder.h" title="data_recorder.h" tooltip="E:/praca/dydaktyka/spair/2015/lab/stm32/code/include/data_recorder.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/spair/inc/data_recorder.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="125" selectionTopPixel="0"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="accelerometer_lis302.h" partName="accelerometer_lis302.h" path="E:/praca/dydaktyka/spair/2015/lab/stm32/studenci/spair-stm32-firmware/code/include/accelerometer_lis302.h" title="accelerometer_lis302.h" tooltip="E:/praca/dydaktyka/spair/2015/lab/stm32/studenci/spair-stm32-firmware/code/include/accelerometer_lis302.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/spair/inc/accelerometer_lis302.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1021" selectionTopPixel="360"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="uart_communication_interface.cpp" partName="uart_communication_interface.cpp" path="E:/praca/dydaktyka/spair/2015/lab/stm32/studenci/spair-stm32-firmware/code/src/uart_communication_interface.cpp" title="uart_communication_interface.cpp" tooltip="E:/praca/dydaktyka/spair/2015/lab/stm32/studenci/spair-stm32-firmware/code/src/uart_communication_interface.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/spair/src/uart_communication_interface.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="6072" selectionTopPixel="1250"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="main.cpp" partName="main.cpp" path="E:/praca/dydaktyka/spair/2015/lab/stm32/code/src/main.cpp" title="main.cpp" tooltip="E:/praca/dydaktyka/spair/2015/lab/stm32/code/src/main.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/spair/src/main.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="756" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="common.h" partName="common.h" path="E:/praca/dydaktyka/spair/2015/lab/stm32/studenci/spair-stm32-firmware/code/include/common.h" title="common.h" tooltip="E:/praca/dydaktyka/spair/2015/lab/stm32/studenci/spair-stm32-firmware/code/include/common.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/spair/inc/common.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1884" selectionTopPixel="1310"/>
-</editor>
-<editor id="org.coocox.builder.ui.editors.ConfigEditor" name="" partName="Configuration" title="Configuration" tooltip="" workbook="DefaultEditorWorkbook">
-<input factoryID="org.coocox.builder.ui.persistent.PersistentElementFactory">
-<org.coocox.builder.ui.editors.ConfigEditor horizontalPosition="0" subTagIndex="2" verticalPosition="82"/>
-</input>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="425"/>
 </editor>
 </editors>
 <views>
-<view id="org.coocox.codebugger.trace.ui.traceview" partName="Semihosting">
-<viewState/>
-</view>
-<view id="org.eclipse.debug.ui.DebugView" partName="Debug">
-<viewState/>
-</view>
-<view id="org.eclipse.cdt.debug.ui.memory.memorybrowser.MemoryBrowser" partName="Memory Browser">
-<viewState>
-<MemoryBroser ComboItemsValue="0x20010b36;" FocuseTabIndex="0" TabsValue="" TextValue="0x20010b36" horizontalPosition="0" verticalPosition="0"/>
-</viewState>
-</view>
-<view id="org.coocox.coassistant.view.CoAssistantView_debug" partName="Peripherals">
-<viewState horizontalPosition="0" verticalPosition="48">
-<selection>&#x0A;<element name="SCB"/>
-</selection>
-<registerValues baseAddress="Base Address: 0xE000ED10" description="Description:  SCB"/>
-</viewState>
-</view>
-<view id="org.eclipse.debug.ui.BreakpointView" partName="Breakpoints">
-<viewState/>
-</view>
-<view id="org.eclipse.debug.ui.VariableView" partName="Variables">
-<viewState/>
-</view>
-<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
-<viewState/>
-</view>
 <view id="org.eclipse.debug.ui.ExpressionView" partName="Expressions">
 <viewState>
-<ExpressionKeySet ExpKeys="rxFrame,app.rang.sampleBuf,rec1.data,cmd[0],pCmd[0],this,filter1.,crc2,crc1,"/>
+<ExpressionKeySet ExpKeys="acc.accVal,rxBuf[rxBufIndexRead-3],rxDmaCounter,"/>
 </viewState>
 </view>
-<view id="org.coocox.component.ui.ComponentView" partName="Components">
-<viewState/>
-</view>
 <view id="org.coocox.builder.ui.views.ProjectView" partName="Project">
-<viewState CommonNavigator.LINKING_ENABLED="0" horizontalPosition="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0" verticalPosition="13">
+<viewState CommonNavigator.LINKING_ENABLED="0" horizontalPosition="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0" verticalPosition="14">
 <expanded>
 <element path="/spair"/>
 <element path="/spair/cmsis"/>
@@ -133,15 +57,39 @@
 <element path="/spair/src"/>
 </expanded>
 <selection>
-<element path="/spair/inc/accelerometer_lis302.h"/>
+<element path="/spair/src/main.cpp"/>
 </selection>
 </viewState>
+</view>
+<view id="org.coocox.component.ui.ComponentView" partName="Components">
+<viewState/>
+</view>
+<view id="org.coocox.codebugger.trace.ui.traceview" partName="Semihosting">
+<viewState/>
+</view>
+<view id="org.eclipse.debug.ui.DebugView" partName="Debug">
+<viewState/>
 </view>
 <view id="org.eclipse.ui.console.ConsoleView" partName="Console">
 <viewState/>
 </view>
-<view id="org.eclipse.cdt.dsf.debug.ui.disassembly.view" partName="Disassembly">
-<viewState disassembly.syncActiveContext="true" disassembly.trackExpression="false"/>
+<view id="org.eclipse.cdt.debug.ui.memory.memorybrowser.MemoryBrowser" partName="Memory Browser">
+<viewState>
+<MemoryBroser ComboItemsValue="0x20010b3b;" FocuseTabIndex="0" TabsValue="" TextValue="0x20010b3b" horizontalPosition="0" verticalPosition="0"/>
+</viewState>
+</view>
+<view id="org.coocox.coassistant.view.CoAssistantView_debug" partName="Peripherals">
+<viewState horizontalPosition="0" verticalPosition="53">
+<selection>&#x0A;<element name="SCB"/>
+</selection>
+<registerValues baseAddress="Base Address: 0xE000ED10" description="Description:  SCB"/>
+</viewState>
+</view>
+<view id="org.eclipse.debug.ui.BreakpointView" partName="Breakpoints">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
+<viewState/>
 </view>
 <view id="org.coocox.component.ui.Help" partName="Help">
 <viewState/>
@@ -286,11 +234,9 @@
 <view id="org.eclipse.debug.ui.DebugView"/>
 <view id="org.eclipse.debug.ui.BreakpointView"/>
 <view id="org.coocox.codebugger.trace.ui.traceview"/>
-<view id="org.eclipse.debug.ui.VariableView"/>
 <view id="org.eclipse.cdt.debug.ui.memory.memorybrowser.MemoryBrowser"/>
 <view id="org.eclipse.debug.ui.ExpressionView"/>
 <view id="org.coocox.component.ui.ComponentView"/>
-<view id="org.eclipse.cdt.dsf.debug.ui.disassembly.view"/>
 <view id="org.coocox.coassistant.view.CoAssistantView_debug"/>
 <view id="org.coocox.builder.ui.views.ProjectView"/>
 <fastViewBars/>
@@ -314,25 +260,23 @@
 </folder>
 </info>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@e7dfd0" ratio="0.5" ratioLeft="956" ratioRight="956" relationship="2" relative="org.eclipse.ui.internal.ViewStack@1d8b476">&#x0A;<folder activePageID="org.eclipse.debug.ui.ExpressionView" appearance="2" expanded="2">&#x0A;<page content="org.coocox.codebugger.trace.ui.traceview" label="Semihosting"/>
-<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
 <page content="org.eclipse.cdt.debug.ui.memory.memorybrowser.MemoryBrowser" label="Memory Browser"/>
 <page content="org.eclipse.debug.ui.ExpressionView" label="Expressions"/>
 <page content="org.coocox.component.ui.ComponentView" label="Components"/>
+<page content="org.eclipse.debug.ui.VariableView" label="LabelNotFound"/>
 <page content="org.eclipse.debug.ui.MemoryView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
-<part id="4"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@6bfcff" ratio="0.70940685" ratioLeft="1184" ratioRight="485" relationship="2" relative="org.eclipse.ui.internal.ViewStack@132bfeb">&#x0A;<folder activePageID="org.coocox.coassistant.view.CoAssistantView_debug" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.cdt.dsf.debug.ui.disassembly.view" label="Disassembly"/>
-<page content="org.coocox.coassistant.view.CoAssistantView_debug" label="Peripherals"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@6bfcff" ratio="0.71970624" ratioLeft="1176" ratioRight="458" relationship="2" relative="org.eclipse.ui.internal.ViewStack@132bfeb">&#x0A;<folder activePageID="org.coocox.coassistant.view.CoAssistantView_debug" appearance="2" expanded="2">&#x0A;<page content="org.coocox.coassistant.view.CoAssistantView_debug" label="Peripherals"/>
+<page content="org.eclipse.cdt.dsf.debug.ui.disassembly.view" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
 <page content="org.eclipse.debug.ui.RegisterView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
-<part id="1"/>
 </presentation>
 </folder>
 </info>
@@ -344,179 +288,174 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/spair/cmsis_boot/startup/startup_stm32f4xx.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/spair/cmsis_boot/system_stm32f4xx.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/spair/src/main.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/spair/src/main.cpp"/>
-<editor factoryID="org.coocox.builder.ui.persistent.PersistentElementFactory" id="org.coocox.builder.ui.editors.ConfigEditor">
-<org.coocox.builder.ui.editors.ConfigEditor/>
-</editor>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/spair/cmsis_boot/startup/startup_stm32f4xx.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/spair/src/main.cpp"/>
-<editor factoryID="org.coocox.builder.ui.persistent.PersistentElementFactory" id="org.coocox.builder.ui.editors.ConfigEditor">
-<org.coocox.builder.ui.editors.ConfigEditor/>
-</editor>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/spair/inc/common.h"/>
-<editor factoryID="org.coocox.builder.ui.persistent.PersistentElementFactory" id="org.coocox.builder.ui.editors.ConfigEditor">
-<org.coocox.builder.ui.editors.ConfigEditor/>
-</editor>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/spair/inc/filter2_iir.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/spair/inc/common.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/spair/cmsis_boot/system_stm32f4xx.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/spair/cmsis_boot/stm32f4xx.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/spair/inc/led_interface.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/spair/inc/accelerometer_lis302.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/spair/src/accelerometer_lis302.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/spair/src/uart_communication_interface.cpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/spair/inc/uart_communication_interface.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/spair/src/uart_communication_interface.cpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/spair/src/rangfinder_2y0a21.cpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/spair/inc/rangfinder_2y0a21.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/spair/inc/filter2_iir.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/spair/inc/cmd_msgs.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/spair/inc/led_interface.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/spair/inc/data_recorder.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/spair/inc/common.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/spair/inc/uart_communication_interface.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/spair/cmsis_boot/stm32f4xx_conf.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/spair/inc/accelerometer_lis302.h"/>
-<editor factoryID="org.coocox.builder.ui.persistent.PersistentElementFactory" id="org.coocox.builder.ui.editors.ConfigEditor">
-<org.coocox.builder.ui.editors.ConfigEditor horizontalPosition="0" subTagIndex="2" verticalPosition="82"/>
+<editor factoryID="org.coocox.builder.ui.persistent.PersistentElementFactory" id="org.coocox.welcome.ui.WelcomePage">
+<org.coocox.welcome.ui.WelcomePage/>
 </editor>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/spair/src/uart_communication_interface.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/spair/inc/uart_communication_interface.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/spair/inc/common.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/spair/inc/rangfinder_2y0a21.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/spair/src/main.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/spair/inc/uart_communication_interface.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/spair/src/accelerometer_lis302.cpp"/>
 </editors>
-<item historyLabel="main.cpp" index="2">
-<position info="not_deleted" x="756" y="0"/>
-</item>
-<item historyLabel="startup_stm32f4xx.c" index="0">
-<position info="not_deleted" x="15713" y="0"/>
-</item>
-<item historyLabel="main.cpp" index="3">
-<position info="not_deleted" x="756" y="0"/>
-</item>
-<item historyLabel="startup_stm32f4xx.c" index="0">
-<position info="not_deleted" x="15713" y="0"/>
-</item>
-<item historyLabel="main.cpp" index="3">
-<position info="not_deleted" x="809" y="0"/>
-</item>
-<item historyLabel="Configuration" index="4"/>
-<item historyLabel="startup_stm32f4xx.c" index="0">
-<position info="not_deleted" x="15713" y="0"/>
-</item>
-<item historyLabel="system_stm32f4xx.c" index="1">
-<position info="not_deleted" x="7326" y="13"/>
-</item>
-<item historyLabel="startup_stm32f4xx.c" index="0">
-<position info="not_deleted" x="14795" y="0"/>
-</item>
-<item historyLabel="main.cpp" index="3">
-<position info="not_deleted" x="831" y="0"/>
-</item>
-<item historyLabel="system_stm32f4xx.c" index="1">
-<position info="not_deleted" x="7326" y="13"/>
-</item>
-<item historyLabel="startup_stm32f4xx.c" index="5">
+<item historyLabel="accelerometer_lis302.cpp" index="2">
 <position/>
 </item>
-<item historyLabel="main.cpp" index="6">
-<position info="not_deleted" x="831" y="0"/>
+<item historyLabel="accelerometer_lis302.h" index="1">
+<position info="not_deleted" x="545" y="0"/>
 </item>
-<item historyLabel="main.cpp" index="6">
-<position info="not_deleted" x="831" y="0"/>
+<item historyLabel="uart_communication_interface.h" index="3">
+<position info="not_deleted" x="1426" y="0"/>
 </item>
-<item historyLabel="startup_stm32f4xx.c" index="5">
-<position info="not_deleted" x="20995" y="0"/>
+<item historyLabel="uart_communication_interface.cpp" index="4">
+<position/>
 </item>
-<item historyLabel="Configuration" index="7"/>
-<item historyLabel="startup_stm32f4xx.c" index="5">
-<position info="not_deleted" x="20995" y="0"/>
+<item historyLabel="uart_communication_interface.h" index="3">
+<position info="not_deleted" x="1426" y="0"/>
 </item>
-<item historyLabel="main.cpp" index="6">
-<position info="not_deleted" x="756" y="0"/>
+<item historyLabel="rangfinder_2y0a21.cpp" index="5">
+<position/>
 </item>
-<item historyLabel="common.h" index="8">
-<position info="not_deleted" x="762" y="0"/>
+<item historyLabel="rangfinder_2y0a21.h" index="6">
+<position info="not_deleted" x="488" y="0"/>
 </item>
-<item historyLabel="common.h" index="8">
-<position info="not_deleted" x="1776" y="0"/>
+<item historyLabel="rangfinder_2y0a21.cpp" index="5">
+<position/>
 </item>
-<item historyLabel="system_stm32f4xx.c" index="1">
-<position info="not_deleted" x="10128" y="0"/>
+<item historyLabel="accelerometer_lis302.h" index="1">
+<position info="not_deleted" x="545" y="0"/>
 </item>
-<item historyLabel="Configuration" index="9"/>
-<item historyLabel="system_stm32f4xx.c" index="1">
-<position info="not_deleted" x="10128" y="0"/>
+<item historyLabel="rangfinder_2y0a21.cpp" index="5">
+<position/>
 </item>
-<item historyLabel="main.cpp" index="6">
-<position info="not_deleted" x="756" y="0"/>
+<item historyLabel="accelerometer_lis302.cpp" index="2">
+<position info="not_deleted" x="631" y="24"/>
 </item>
-<item historyLabel="filter2_iir.h" index="10">
-<position info="not_deleted" x="667" y="0"/>
+<item historyLabel="rangfinder_2y0a21.cpp" index="5">
+<position/>
 </item>
-<item historyLabel="common.h" index="11">
-<position info="not_deleted" x="1964" y="0"/>
+<item historyLabel="accelerometer_lis302.cpp" index="2">
+<position info="not_deleted" x="631" y="24"/>
 </item>
-<item historyLabel="main.cpp" index="6">
-<position info="not_deleted" x="756" y="0"/>
+<item historyLabel="filter2_iir.h" index="7">
+<position/>
 </item>
-<item historyLabel="system_stm32f4xx.c" index="12">
-<position info="not_deleted" x="10128" y="0"/>
+<item historyLabel="accelerometer_lis302.cpp" index="2">
+<position info="not_deleted" x="631" y="24"/>
 </item>
-<item historyLabel="main.cpp" index="6">
-<position info="not_deleted" x="756" y="0"/>
+<item historyLabel="cmd_msgs.h" index="8">
+<position info="not_deleted" x="111" y="0"/>
 </item>
-<item historyLabel="stm32f4xx.h" index="13">
-<position info="not_deleted" x="1952" y="0"/>
+<item historyLabel="led_interface.h" index="9">
+<position/>
 </item>
-<item historyLabel="main.cpp" index="6">
-<position info="not_deleted" x="756" y="0"/>
+<item historyLabel="cmd_msgs.h" index="8">
+<position info="not_deleted" x="111" y="0"/>
 </item>
-<item historyLabel="led_interface.h" index="14">
-<position info="not_deleted" x="401" y="0"/>
+<item historyLabel="main.cpp" index="0">
+<position info="not_deleted" x="582" y="0"/>
 </item>
-<item historyLabel="main.cpp" index="6">
-<position info="not_deleted" x="756" y="0"/>
+<item historyLabel="uart_communication_interface.cpp" index="4">
+<position info="not_deleted" x="4481" y="0"/>
 </item>
-<item historyLabel="accelerometer_lis302.cpp" index="15">
-<position info="not_deleted" x="803" y="1"/>
+<item historyLabel="main.cpp" index="0">
+<position info="not_deleted" x="582" y="0"/>
 </item>
-<item historyLabel="uart_communication_interface.cpp" index="16">
-<position info="not_deleted" x="2662" y="0"/>
+<item historyLabel="rangfinder_2y0a21.cpp" index="5">
+<position/>
 </item>
-<item historyLabel="uart_communication_interface.h" index="17">
-<position info="not_deleted" x="1214" y="0"/>
+<item historyLabel="main.cpp" index="0">
+<position info="not_deleted" x="582" y="0"/>
 </item>
-<item historyLabel="common.h" index="11">
-<position info="not_deleted" x="1964" y="0"/>
+<item historyLabel="cmd_msgs.h" index="8">
+<position info="not_deleted" x="111" y="0"/>
 </item>
-<item historyLabel="rangfinder_2y0a21.cpp" index="18">
-<position info="not_deleted" x="510" y="0"/>
+<item historyLabel="data_recorder.h" index="10">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="rangfinder_2y0a21.h" index="19">
-<position info="not_deleted" x="1517" y="0"/>
+<item historyLabel="filter2_iir.h" index="7">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="rangfinder_2y0a21.cpp" index="18">
-<position info="not_deleted" x="510" y="0"/>
-</item>
-<item historyLabel="filter2_iir.h" index="10">
-<position info="not_deleted" x="667" y="0"/>
-</item>
-<item historyLabel="rangfinder_2y0a21.cpp" index="18">
-<position info="not_deleted" x="510" y="0"/>
+<item historyLabel="led_interface.h" index="9">
+<position info="not_deleted" x="0" y="0"/>
 </item>
 <item historyLabel="common.h" index="11">
-<position info="not_deleted" x="1947" y="0"/>
+<position info="not_deleted" x="378" y="0"/>
 </item>
-<item historyLabel="accelerometer_lis302.h" index="20">
-<position info="not_deleted" x="2051" y="0"/>
+<item historyLabel="main.cpp" index="0">
+<position info="not_deleted" x="582" y="0"/>
 </item>
-<item historyLabel="accelerometer_lis302.h" index="20">
-<position info="not_deleted" x="2150" y="0"/>
+<item historyLabel="rangfinder_2y0a21.cpp" index="5">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Configuration" index="21"/>
-<item historyLabel="uart_communication_interface.cpp" index="22">
-<position info="not_deleted" x="6072" y="0"/>
+<item historyLabel="main.cpp" index="0">
+<position info="not_deleted" x="582" y="0"/>
 </item>
-<item historyLabel="accelerometer_lis302.h" index="20">
-<position info="not_deleted" x="2150" y="0"/>
+<item historyLabel="rangfinder_2y0a21.h" index="6">
+<position info="not_deleted" x="488" y="0"/>
 </item>
-<item historyLabel="accelerometer_lis302.h" index="20">
-<position info="not_deleted" x="1023" y="0"/>
+<item historyLabel="led_interface.h" index="9">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item active="true" historyLabel="accelerometer_lis302.h" index="20">
-<position info="not_deleted" x="2177" y="0"/>
+<item historyLabel="rangfinder_2y0a21.h" index="6">
+<position info="not_deleted" x="488" y="0"/>
+</item>
+<item historyLabel="common.h" index="11">
+<position info="not_deleted" x="378" y="0"/>
+</item>
+<item historyLabel="uart_communication_interface.h" index="12">
+<position info="not_deleted" x="1424" y="0"/>
+</item>
+<item historyLabel="stm32f4xx_conf.h" index="13">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="accelerometer_lis302.h" index="14">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="stm32f4xx_conf.h" index="13">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="welcome" index="15"/>
+<item historyLabel="uart_communication_interface.h" index="16">
+<position info="not_deleted" x="1424" y="0"/>
+</item>
+<item historyLabel="welcome" index="15"/>
+<item historyLabel="common.h" index="17">
+<position info="not_deleted" x="378" y="0"/>
+</item>
+<item historyLabel="welcome" index="15"/>
+<item historyLabel="rangfinder_2y0a21.h" index="18">
+<position info="not_deleted" x="488" y="0"/>
+</item>
+<item historyLabel="main.cpp" index="19">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="rangfinder_2y0a21.h" index="18">
+<position info="not_deleted" x="708" y="0"/>
+</item>
+<item historyLabel="uart_communication_interface.h" index="20">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="accelerometer_lis302.cpp" index="21">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item active="true" historyLabel="main.cpp" index="19">
+<position info="not_deleted" x="0" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -525,52 +464,51 @@
 <actionBarAdvisor/>
 </window>
 <mruList>
-<file factoryID="org.coocox.builder.ui.persistent.PersistentElementFactory" id="org.coocox.builder.ui.editors.ConfigEditor" name="" tooltip="">
-<persistable>
-<org.coocox.builder.ui.editors.ConfigEditor horizontalPosition="0" subTagIndex="2" verticalPosition="82"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="accelerometer_lis302.cpp" tooltip="spair/src/accelerometer_lis302.cpp">
+<persistable path="/spair/src/accelerometer_lis302.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="uart_communication_interface.h" tooltip="spair/inc/uart_communication_interface.h">
+<persistable path="/spair/inc/uart_communication_interface.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.cpp" tooltip="spair/src/main.cpp">
+<persistable path="/spair/src/main.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="accelerometer_lis302.h" tooltip="spair/inc/accelerometer_lis302.h">
+<persistable path="/spair/inc/accelerometer_lis302.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="rangfinder_2y0a21.cpp" tooltip="spair/src/rangfinder_2y0a21.cpp">
+<persistable path="/spair/src/rangfinder_2y0a21.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="led_interface.h" tooltip="spair/inc/led_interface.h">
+<persistable path="/spair/inc/led_interface.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="filter2_iir.h" tooltip="spair/inc/filter2_iir.h">
+<persistable path="/spair/inc/filter2_iir.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="data_recorder.h" tooltip="spair/inc/data_recorder.h">
+<persistable path="/spair/inc/data_recorder.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="uart_communication_interface.cpp" tooltip="spair/src/uart_communication_interface.cpp">
+<persistable path="/spair/src/uart_communication_interface.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx.h" tooltip="spair/cmsis_boot/stm32f4xx.h">
+<persistable path="/spair/cmsis_boot/stm32f4xx.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="startup_stm32f4xx.c" tooltip="spair/cmsis_boot/startup/startup_stm32f4xx.c">
+<persistable path="/spair/cmsis_boot/startup/startup_stm32f4xx.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="cmd_msgs.h" tooltip="spair/inc/cmd_msgs.h">
+<persistable path="/spair/inc/cmd_msgs.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="rangfinder_2y0a21.h" tooltip="spair/inc/rangfinder_2y0a21.h">
+<persistable path="/spair/inc/rangfinder_2y0a21.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="rtnode_cocox/main.c">
+<persistable path="/rtnode_cocox/main.c"/>
+</file>
+<file factoryID="org.coocox.component.ui.editors.repository.RepositoryElementFactory" id="org.coocox.builder.ui.editors.repository.RepositoryBrowser" name="Repository" tooltip="Repository">
+<persistable>&#x0A;<subPage/>
 </persistable>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_hal.c" tooltip="ioUsbCard/HAL/src/stm32f4xx_hal.c">
-<persistable path="/ioUsbCard/HAL/src/stm32f4xx_hal.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="usbd_conf.c" tooltip="ioUsbCard/Src/usbd_conf.c">
-<persistable path="/ioUsbCard/Src/usbd_conf.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_hal_msp.c" tooltip="ioUsbCard/Src/stm32f4xx_hal_msp.c">
-<persistable path="/ioUsbCard/Src/stm32f4xx_hal_msp.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="usbd_desc.c" tooltip="ioUsbCard/Src/usbd_desc.c">
-<persistable path="/ioUsbCard/Src/usbd_desc.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="usb_device.c" tooltip="ioUsbCard/Src/usb_device.c">
-<persistable path="/ioUsbCard/Src/usb_device.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="usbd_cdc_if.c" tooltip="ioUsbCard/Src/usbd_cdc_if.c">
-<persistable path="/ioUsbCard/Src/usbd_cdc_if.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_it.c" tooltip="ioUsbCard/Src/stm32f4xx_it.c">
-<persistable path="/ioUsbCard/Src/stm32f4xx_it.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="usbd_cdc_if.h" tooltip="ioUsbCard/Inc/usbd_cdc_if.h">
-<persistable path="/ioUsbCard/Inc/usbd_cdc_if.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx.h" tooltip="ioUsbCard/CMSIS/Include/stm32f4xx.h">
-<persistable path="/ioUsbCard/CMSIS/Include/stm32f4xx.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.asm.AsmEditor" name="startup_stm32f407xx.s" tooltip="ioUsbCard/CMSIS/startup_stm32f407xx.s">
-<persistable path="/ioUsbCard/CMSIS/startup_stm32f407xx.s"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_ll_usb.h" tooltip="ioUsbCard/HAL/Inc/stm32f4xx_ll_usb.h">
-<persistable path="/ioUsbCard/HAL/Inc/stm32f4xx_ll_usb.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_hal_conf.h" tooltip="ioUsbCard/Inc/stm32f4xx_hal_conf.h">
-<persistable path="/ioUsbCard/Inc/stm32f4xx_hal_conf.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_it.h" tooltip="ioUsbCard/Inc/stm32f4xx_it.h">
-<persistable path="/ioUsbCard/Inc/stm32f4xx_it.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_hal_rcc_ex.h" tooltip="ioUsbCard/HAL/Inc/stm32f4xx_hal_rcc_ex.h">
-<persistable path="/ioUsbCard/HAL/Inc/stm32f4xx_hal_rcc_ex.h"/>
 </file>
 </mruList>
 </workbench>
