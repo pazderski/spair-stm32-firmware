@@ -1,4 +1,4 @@
-#include "common.h"
+#include "common.hpp"
 
 extern "C"
 {
@@ -15,11 +15,13 @@ void Delay(volatile uint32_t count)
 }
 
 
-void EXTI0_IRQHandler(void) {
+void EXTI0_IRQHandler(void)
+{
 	pApp->rang.Irq();
 }
 
-void SPI1_IRQHandler(void) {
+void SPI1_IRQHandler(void)
+{
 	pApp->acc.Irq();
 }
 
@@ -30,12 +32,12 @@ void DMA1_Stream6_IRQHandler()
 }
 
 // Obsluga przerwania od odbiornika/nadajnika USART2
-void USART2_IRQHandler() {
+void USART2_IRQHandler()
+{
 	pApp->com.IrqTx();
 }
 
-void SysTick_Handler(void) {
+void SysTick_Handler(void)
+{
 	pApp->PeriodicUpdate();
 }
-
-

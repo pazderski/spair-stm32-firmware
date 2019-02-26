@@ -1,5 +1,4 @@
-/************************************************************************************************************
- *  Laboratorium SPAiR
+/**
  *
  *  Podstawowe oprogramowanie mikrokontrolera serii STM32F4xx
  *
@@ -10,12 +9,12 @@
  *   - obs³uga akcelerometru przez interfejs SPI
  *   - obs³uga przetwornika A/C (z DMA)
  *
- *   Opracowanie: D. Pazderski, Katedra Sterowania i In¿ynierii Systemów 2015-2017
- *   v. 1.6.0
+ *   Opracowanie: D. Pazderski, Instytut Automatyki i Robotyki, 2017-2019
+ *   v. 1.6.1
  *
  ************************************************************************************************************/
 
-#include "common.h"
+#include "common.hpp"
 
 App * pApp;
 
@@ -29,5 +28,4 @@ int main(void)
 
 	app.Run();
 }
-
 

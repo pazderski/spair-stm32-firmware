@@ -1,4 +1,4 @@
-#include "uart_communication_interface.h"
+#include <uart_communication_interface.hpp>
 
 // Computation of  16-bit CRC (similar to Modbus RTU)
 uint16_t UartCommunicationInterface::CRC16(const uint8_t *nData, uint16_t wLength)

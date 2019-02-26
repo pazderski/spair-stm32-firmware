@@ -1,4 +1,4 @@
-#include "accelerometer_lis302.h"
+#include "accelerometer_lis302.hpp"
 
 void AccelerometerLIS302::Fsm(uint16_t data) {
 
