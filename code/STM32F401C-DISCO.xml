@@ -12,8 +12,8 @@
 <targetDefinitions>
   <board id="stm32f401c-disco">
     <name>STM32F401C-DISCO</name>
-    <dbgIF>SWD</dbgIF>
     <dbgIF>JTAG</dbgIF>
+    <dbgIF>SWD</dbgIF>
     <dbgDEV>ST-Link</dbgDEV>
     <mcuId>stm32f401vctx</mcuId>
   </board>

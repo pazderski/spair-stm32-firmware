@@ -5,14 +5,14 @@
 % SPAiR lab 2017
 %
 
-portNumber = 25;
+portNumber = 8;
 
 if (commdrv('open', portNumber) == -1)
     return;
 end
 
 % sampling time
-Ts = 0.03;
+Ts = 0.1;
 
 % lifespan
 Tf = 5;

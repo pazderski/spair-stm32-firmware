@@ -103,6 +103,8 @@ void UartCommunicationInterface::Init()
 
 	rxDmaCounterPrev = DMA_USART_RX->NDTR;
 
+	rxBufIndexRead = RX_BUF_SIZE - rxDmaCounterPrev;
+
 	txData = txBuf + 4;
 	rxData = rxFrame + 1;
 
