@@ -12,7 +12,7 @@ if (commdrv('open', portNumber) == -1)
 end
 
 % sampling time
-Ts = 0.1;
+Ts = 0.05;
 
 % lifespan
 Tf = 5;

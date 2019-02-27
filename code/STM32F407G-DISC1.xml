@@ -10,11 +10,11 @@
 ]>
 
 <targetDefinitions>
-  <board id="stm32f401c-disco">
-    <name>STM32F401C-DISCO</name>
-    <dbgIF>JTAG</dbgIF>
+  <board id="stm32f407g-disc1">
+    <name>STM32F407G-DISC1</name>
     <dbgIF>SWD</dbgIF>
+    <dbgIF>JTAG</dbgIF>
     <dbgDEV>ST-Link</dbgDEV>
-    <mcuId>stm32f401vctx</mcuId>
+    <mcuId>stm32f407vgtx</mcuId>
   </board>
 </targetDefinitions>
