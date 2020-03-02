@@ -57,7 +57,9 @@ while (tau < Tf)
     end
 end   
 
+serial('close');
 % clear buffers (based on sample numbers)
 D1 = D1(1:(i-1));
 D2 = D2(1:(i-1));
 time = time(1:(i-1));
+
